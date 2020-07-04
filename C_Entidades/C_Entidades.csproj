@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CargoE.cs" />
+    <Compile Include="ClienteE.cs" />
     <Compile Include="DepartamentoE.cs" />
     <Compile Include="EmpleadoE.cs" />
     <Compile Include="ProfesionE.cs" />

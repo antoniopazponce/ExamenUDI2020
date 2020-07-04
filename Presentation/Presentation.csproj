@@ -74,6 +74,7 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_MostrarCliente.cs" />
     <Compile Include="Frm_Profesion.cs">
       <SubType>Form</SubType>
     </Compile>
