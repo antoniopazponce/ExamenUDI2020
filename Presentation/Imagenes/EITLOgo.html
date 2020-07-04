@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDI - Universidad para el Desarrollo y la Innovaci&#243;n - Santa Cruz Bolivia</title>
+    <meta name="description" content="Universidad para el Desarrollo y la Innovación - Santa Cruz Bolivia">
+    <meta name="keywords" content="Universidad,Desarrollo,Innovación, Carreras,Santa Cruz,Bolivia">
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css?ver=1.0.8">
+    <link href='/css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/demo.css' rel='stylesheet' type='text/css'>
+    
+    <link href='/css/shadowbox.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/shadowbox.js"></script>
+
+    <!--<script type="text/javascript">    Shadowbox.init({ language: "es", players: ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv'] }); </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if(location.pathname == "/")
+            {
+                setTimeout(function () {
+                    Shadowbox.open({
+                        content: '<div><img src="images/comunicadodefensapublicapng1.png"></div>',
+                        player: "html",
+                        title: "",
+                        width: 800,
+                        height: 450
+                    });
+                }, 50);
+            }
+        });
+    </script>-->
+    <script type="text/javascript">
+
+        window.$zopim || (function (d, s) {
+            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+
+                d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                    z.set.
+
+                        _.push(o)
+                }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+
+            $.src = "https://v2.zopim.com/?4Ys10g7l367eJYWbTq3Ge43JFPjyXT0a"; z.t = +new Date; $.
+
+                type = "text/javascript"; e.parentNode.insertBefore($, e)
+        })(document, "script");
+
+    </script>
+    <script type="text/javascript">
+
+
+        function validar() {
+            var re = /^[A-Za-z .'-]+$/;
+            var nombre = $("input[name='nombre']");
+            if (!re.test(nombre.val()) || nombre.val() == "") {
+                nombre.val("");
+                nombre.attr("placeholder", "* Ingrese un nombre valido");
+                nombre.css("border", "2px solid red");
+
+
+
+            }
+            else {
+                nombre.attr("placeholder", "");
+                nombre.css("border", "1px solid #ccc");
+
+            }
+            var re1 = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+            var email = $("input[name='email']");
+            if (!re1.test(email.val()) || email.val() == "") {
+                email.val("");
+                email.attr("placeholder", "* Ingrese un email valido");
+                email.css("border", "2px solid red");
+
+
+
+            }
+            else {
+                email.attr("placeholder", "");
+                email.css("border", "1px solid #ccc");
+
+            }
+            var re2 = /((^([\+][0-9]{1,3}([ \.\-])?)?([\(][0-9]{1,6}[\)])?([0-9 \.\-]{1,32})(([A-Za-z \:]{1,11})?[0-9]{1,4}?))|^)$/;
+            var telefono = $("input[name='telefono']");
+            if (!re2.test(telefono.val()) || telefono.val() == "") {
+                telefono.val("");
+                telefono.attr("placeholder", "* Ingrese un telefono valido");
+                telefono.css("border", "2px solid red");
+
+
+
+            }
+            else {
+                telefono.attr("placeholder", "");
+                telefono.css("border", "1px solid #ccc");
+
+            }
+            var introducido = $("input[name='introducido']");
+            if (introducido.val() == "") {
+                introducido.attr("placeholder", "* Ingrese captcha valido");
+                introducido.css("border", "2px solid red");
+
+
+
+            }
+            else {
+                introducido.attr("placeholder", "");
+                introducido.css("border", "1px solid #ccc");
+
+            }
+            if ((!re.test(nombre.val()) || nombre.val() == "") || (!re1.test(email.val()) || email.val() == "") || (introducido.val() == "")) {
+
+                return false;
+
+            }
+            else {
+
+                return true;
+
+            }
+
+        }
+    </script>
+    <script>
+        $(function () {
+            var pathname = window.location.pathname;
+            var i;
+            switch (pathname) {
+                case "/UDI/":
+                    i = 0;
+                    break;
+                case "/UDI/Quienes-Somos/":
+                    //if(pathname=="/UDI/Quienes-Somos/Fundacion-UDI")
+                    //{
+                    i = 1;
+                    //}
+                    break;
+                case "/UDI/Porque-la-UDI/":
+                    i = 2;
+                    break;
+                case "/UDI/Campus-UDI/":
+                    i = 3;
+                    break;
+                case "/UDI/Educacion-Continua-EC/":
+                    i = 4;
+                    break;
+                case "/UDI/Escuelas/":
+                    i = 5;
+                    break;
+                case "/UDI/Inscripciones/":
+                    i = 6;
+                    break;
+            }
+            $("#menu #nav > li > a").eq(i).css("color", "white");
+            $("#menu #nav > li > a").eq(i).css("background", "#E91A12");
+            var titulo = $("h1").text();
+            $("#oferta").attr("value", titulo);
+            var te = $("#oferta").attr("value")
+            if (te == "") {
+                $("#oferta").attr("value", "Contacto General");
+            }
+            $(window).resize(function () {
+                var ancho = $(window).width();
+                if (ancho >= 680) {
+                    var sw = $("#menudesplegable").css("display");
+                    if (sw == 'block') {
+                        $("#menudesplegable").css("display", "none");
+                    }
+
+                }
+            });
+            $(".boton-menu").click(function () {
+                $("#menudesplegable").slideToggle("slow");
+            });
+            var $gallery = $('.gallery a').simpleLightbox();
+
+            $gallery.on('show.simplelightbox', function () {
+                console.log('Requested for showing');
+            })
+                .on('shown.simplelightbox', function () {
+                    console.log('Shown');
+                })
+                .on('close.simplelightbox', function () {
+                    console.log('Requested for closing');
+                })
+                .on('closed.simplelightbox', function () {
+                    console.log('Closed');
+                })
+                .on('change.simplelightbox', function () {
+                    console.log('Requested for change');
+                })
+                .on('next.simplelightbox', function () {
+                    console.log('Requested for next');
+                })
+                .on('prev.simplelightbox', function () {
+                    console.log('Requested for prev');
+                })
+                .on('nextImageLoaded.simplelightbox', function () {
+                    console.log('Next image loaded');
+                })
+                .on('prevImageLoaded.simplelightbox', function () {
+                    console.log('Prev image loaded');
+                })
+                .on('changed.simplelightbox', function () {
+                    console.log('Image changed');
+                })
+                .on('nextDone.simplelightbox', function () {
+                    console.log('Image changed to next');
+                })
+                .on('prevDone.simplelightbox', function () {
+                    console.log('Image changed to prev');
+                })
+                .on('error.simplelightbox', function (e) {
+                    console.log('No image found, go to the next/prev');
+                    console.log(e);
+                });
+        });
+    </script>
+    <script type="text/javascript" src="/js/jssor.js"></script>
+    <script type="text/javascript" src="/js/jssor.slider.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+    <script type="text/javascript" src="/js/simple-lightbox.js"></script>
+
+    <!-- Start of  Zendesk Widget script -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=3def0f6b-481c-4348-b04e-2b020e028020"></script>
+    
+</head>
+<body>
+    <div id="page" style="display:block;">
+        <div id="cabecera">
+
+            <div id="logo">
+                <a href="/Home"><img src="/images/logo_udi.png" alt="UDI - Universidad para el Desarrollo y la innovación" title="UDI - Logo" class="logoudi"></a>
+                <img src="/images/menu-ico-neg.png" alt="UDI - Universidad para el Desarrollo y la innovación" title="UDI - Menu" class="boton-menu">
+            </div>
+            <div id="menu">
+                <ul id="nav">
+                    <li><a href="/Home">Inicio</a></li>
+                    <li>
+                        <a href="/QuienesSomos/Index">&#191;Qui&#233;nes Somos?</a>
+                        <ul>
+                            <li><a href="/QuienesSomos/FundacionUdi">Directorio Fundaci&#243;n EDACE</a></li>
+                            <li><a href="/QuienesSomos/Historia">Historia</a></li>
+                            <li><a href="/QuienesSomos/ResolucionMinisterial">Reconocimiento Legal</a></li>
+                            <li><a href="/QuienesSomos/NuestrosValores">Nuestros Valores</a></li>
+                            <li><a href="/QuienesSomos/MisionVision">Misi&#243;n y Visi&#243;n</a></li>
+                            <!--<li><a href="/QuienesSomos/AutoridadDeFiscalizacionDelJuego">Autoridad de Fiscalizaci&#243;n del Juego</a></li>-->
+                        <li>
+                            <a href="/QuienesSomos/Autoridades">Autoridades Universitarias</a>
+                            <ul>
+                                <li>
+                                    <a href="/QuienesSomos/MensajeDeRector">Mensaje del Rector</a>
+                                    <ul>
+                                        <li><a href="/QuienesSomos/ConsejoAcademico">Consejo Acad&#233;mico</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/QuienesSomos/CertificacionesYAcreditaciones">Certificaciones y Acreditaciones</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>¿Por qué la UDI?</a>
+                        <ul>
+                            <li>
+                                <a href="/PorqueLaUDI/ModeloDeFormacionPorCompetencia">Modelo de Formaci&#243;n por Competencias MFC</a>
+                                <ul>
+                                    <li>
+                                        <a href="/PorqueLaUDI/UTED">UTED</a>
+                                        <!-- <ul>
+                                            <li><a href="/PorqueLaUDI/Intercambios">Intercambios</a></li>
+                                         </ul>-->
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/PorqueLaUDI/ConveniosInstitucionales">Convenios Institucionales</a></li>
+                            <li><a href="/PorqueLaUDI/CertificacionToeicBridge">Certificaci&#243;n TOEIC BRIDGE</a></li>
+                            <li><a href="/PorqueLaUDI/DAES">Departamento de Asuntos Estudiantiles DAES</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Campus UDI</a>
+                        <ul>
+                            <li><a href="/CampusUDI/Infraestructura">Infraestructura</a></li>
+                            <li><a href="/CampusUDI/Biblioteca">Biblioteca</a></li>
+                            <li><a href="/CampusUDI/LaboratoriosyTalleres">Laboratorios y Talleres</a></li>
+                            <li><a href="/CampusUDI/Deportes">Deportes</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Posgrado</a>
+                        <ul>
+                            <li><a href="/EducacionContinuaEc/Index">Educaci&#243;n Continua</a></li>
+                            <li><a href="/EducacionContinuaEcCursos/Index">Posgrado</a></li>
+                            <li><a href="/EducacionContinuaEc/Programacion2017">Calendario Posgrado</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Escuelas</a>
+                        <ul>
+                            <li><a href="/Escuelas/AdministracionNegociosEAN">Administraci&#243;n y Negocios EAN</a></li>
+                            <li><a href="/Escuelas/IngenieriaEI">Ingenier&#237;a EI</a></li>
+                            <li><a href="/Escuelas/GastronomiayTurismoEGT">Gastronom&#237;a y Turismo EGT</a></li>
+                            <li><a href="/Escuelas/InformaticayTelecomunicacionesEIT">Inform&#225;tica y Telecomunicaciones EIT</a></li>
+                            <li><a href="/Escuelas/ProgramadeFormacionPFG">Programa de formaci&#243;n General PFG</a></li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Inscripciones</a>
+                        <ul>
+                            <li><a href="/Inscripciones/RequisitosDeInscripcion">Requisitos de Inscripci&#243;n</a></li>
+                            <li><a href="{{ path('Escuelas-Cursos-de-Verano') }}">Cursos de Verano e Invierno</a></li>
+                            <li><a href="/Becas/Index">Becas</a></li>
+                            <li><a href="/Calendario/Index">Calendario</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--Menu desplegable-->
+
+        </div>
+    </div>
+    <div id="menudesplegable" style="background:#F40000;">
+        <ul>
+            <li><a href="/Home">Inicio</a></li>
+            <li>
+                <a href="/QuienesSomos/Index">&#191;Qui&#233;nes Somos?</a>
+                <ul>
+                    <li><a href="/QuienesSomos/FundacionUdi">Directorio Fundaci&#243;n EDACE</a></li>
+                    <li><a href="/QuienesSomos/Historia">Historia</a></li>
+                    <li><a href="/QuienesSomos/ResolucionMinisterial">Reconocimiento Legal</a></li>
+                    <li><a href="/QuienesSomos/NuestrosValores">Nuestros Valores</a></li>
+                    <li><a href="/QuienesSomos/MisionVision">Misi&#243;n y Visi&#243;n</a></li>
+                    <!-- <li><a href="/QuienesSomos/AutoridadDeFiscalizacionDelJuego">Autoridad de Fiscalizaci&#243;n del Juego</a></li>-->
+                <li>
+                    <a href="/QuienesSomos/Autoridades">Autoridades Universitarias</a>
+                    <ul>
+                        <li>
+                            <a href="/QuienesSomos/MensajeDeRector">Mensaje del Rector</a>
+                            <ul>
+                                <li><a href="/QuienesSomos/ConsejoAcademico">Consejo Acad&#233;mico</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/QuienesSomos/CertificacionesYAcreditaciones">Certificaciones y Acreditaciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>¿Por qué la UDI?</a>
+                <ul>
+                    <li>
+                        <a href="/PorqueLaUDI/ModeloDeFormacionPorCompetencia">Modelo de Formaci&#243;n por Competencias MFC</a>
+                        <ul>
+                            <li>
+                                <a href="/PorqueLaUDI/UTED">UTED</a>
+                                <!--<ul>
+                                   <li><a href="/PorqueLaUDI/Intercambios">Intercambios</a></li>
+                                </ul>-->
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/PorqueLaUDI/ConveniosInstitucionales">Convenios Institucionales</a></li>
+                    <li><a href="/PorqueLaUDI/CertificacionToeicBridge">Certificaci&#243;n TOEIC BRIDGE</a></li>
+                    <li><a href="/PorqueLaUDI/DAES">Departamento de Asuntos Estudiantiles DAES</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Campus UDI</a>
+                <ul>
+                    <li><a href="/CampusUDI/Infraestructura">Infraestructura</a></li>
+                    <li><a href="/CampusUDI/Biblioteca">Biblioteca</a></li>
+                    <li><a href="/CampusUDI/LaboratoriosyTalleres">Laboratorios y Talleres</a></li>
+                    <li><a href="/CampusUDI/Deportes">Deportes</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a>Posgrado</a>
+                <ul>
+                    <li><a href="/EducacionContinuaEc/Index">Educaci&#243;n Continua</a></li>
+                    <li><a href="/EducacionContinuaEcCursos/Index">Academia Cisco</a></li>
+                    <li><a href="/EducacionContinuaEc">Programaci&#243;n 2017</a></li>
+
+                    
+                </ul>
+            </li>
+            <li>
+                <a>Escuelas</a>
+                <ul>
+
+                    <li><a href="/Escuelas/AdministracionNegociosEAN">Administraci&#243;n y Negocios EAN</a></li>
+                    <li><a href="/Escuelas/IngenieriaEI">Ingenier&#237;a EI</a></li>
+                    <li><a href="/Escuelas/GastronomiayTurismoEGT">Gastronom&#237;a y Turismo EGT</a></li>
+                    <li><a href="/Escuelas/InformaticayTelecomunicacionesEIT">Inform&#225;tica y Telecomunicaciones EIT</a></li>
+                    <li><a href="/Escuelas/ProgramadeFormacionPFG">Programa de formaci&#243;n General PFG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Inscripciones</a>
+                <ul>
+                    <li><a href="/Inscripciones/RequisitosDeInscripcion">Requisitos de Inscripci&#243;n</a></li>
+                    <li><a href="{{ path('Escuelas-Cursos-de-Verano') }}">Cursos de Verano e Invierno</a></li>
+                    <li><a href="/Becas/Index">Becas</a></li>
+                    <li><a href="/Calendario/Index">Calendario</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+
+<div id="slider">
+    <div id="slider1_container" style="margin: 0 auto;width: 1300px; height: 540px; overflow: hidden;">
+        <div data-u="slides" style="cursor: move; width: 1300px;
+            height: 540px; overflow: hidden;">
+            <div>
+                <img data-u="image" src="/images/Gestio%cc%81n ll-2019.jpg?ver=1.1" alt="Universidad para el Desarrollo y la innovación - Nosotros" title="Universidad para el Desarrollo y la innovación" style="max-width:100%;" />
+            </div>
+            <div>
+                <img data-u="image" src="/images/Beca 50 I-2019.jpg?ver=1.1" alt="Universidad para el Desarrollo y la innovación - Nosotros" title="Universidad para el Desarrollo y la innovación" style="max-width:100%;" />
+            </div>
+
+            <div>
+                <img data-u="image" src="/images/ingresoudi.jpg?ver=1.1" alt="Universidad para el Desarrollo y la innovación - Nosotros" title="Universidad para el Desarrollo y la innovación" style="max-width:100%;" />
+            </div>
+            <div>
+                <img data-u="image" src="/images/plaza.jpg?ver=1.1" alt="Universidad para el Desarrollo y la innovación - Nosotros" title="Universidad para el Desarrollo y la innovación" style="max-width:100%;" />
+            </div>
+        </div>
+        <div data-u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+            <div data-u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+        </div>
+        <span data-u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+        </span>
+        <span data-u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+        </span>
+        <a style="display: none" href="http://www.jssor.com">Image Slider</a>
+    </div>
+</div>
+
+<div id="contenidos">
+    <div class="trescol-Portada">
+        <h2>MULTIMEDIA</h2>
+        <a href="/Multimedia" class="boton">Ver todos los videos</a>
+
+        <div class="multimedia">
+            <a href="https://www.youtube.com/watch?v=_6B7KWWaDCk" target="_blank"><img src="/images/Spot 03.png?ver=1.1" alt="UDI - Multimedia" title="UDI - Multimedia"></a>
+            <h3>Dominá lo que aprendés </h3>
+        </div>
+
+        <div class="multimedia">
+            <a href="https://www.youtube.com/watch?v=ZhlsmWNLLT0" target="_blank"><img src="/images/Spot 02.png?ver=1.1" alt="UDI - Multimedia" title="UDI - Multimedia"></a>
+            <h3>Dominá lo que aprendés, estudiá en la UDI </h3>
+        </div>
+        <div class="multimedia">
+            <a href="https://www.youtube.com/watch?v=hakaJ3-L_80" target="_blank"><img src="/images/Institucional nuevo.png?ver=1.1" alt="UDI - Multimedia" title="UDI - Multimedia"></a>
+            <h3>UDI Institucional</h3>
+        </div>
+        <div class="multimedia">
+            <a href="https://www.youtube.com/watch?v=HFA3IAgAyW0" target="_blank"><img src="/images/Spot 01.png?ver=1.1" alt="UDI - Multimedia" title="UDI - Multimedia"></a>
+            <h3>Potencia tu vocación natural </h3>
+        </div>
+        <h2>BECAS</h2>
+        <a href="/Promociones" class="boton">Ver Becas</a>
+        <div class="multimedia">
+            <a href="/Promociones">
+                <img src="/images/promocionauto.png?ver=1.1" alt="UDI - Multimedia" title="UDI - Multimedia">
+                <br><br><a href="/Becas">
+                    <img src="/images/asuntos-estudiantiles.png?ver=1.1" alt="UDI - Multimedia" title="UDI - Multimedia">
+                </a>
+
+                <!-- <h3>COMENZÁ TU SEMESTRE SOBRE RUEDAS</h3>-->
+        </div>
+    </div>
+    <div class="trescol-Portada">
+        <h2>ESCUELAS</h2>
+        <div class="capsula-escuela">
+            <div class="doscol">
+                <a href="/Escuelas/InformaticayTelecomunicacionesEIT"><img src="/images/Escuela-Informatica.png?ver=1.1" class="img-capsula-escuela" alt="UDI - Escuela de Informática y telecomunicaciones - EIT" title="UDI - Escuela de Informática y telecomunicaciones - EIT"></a>
+            </div>
+            <div class="doscol">
+                <a href="/Escuelas/GastronomiayTurismoEGT"><img src="/images/Escuela-Gastronomia.png?ver=1.1" class="img-capsula-escuela" alt="UDI - Escuela de Informática y telecomunicaciones - EIT" title="UDI - Escuela de Informática y telecomunicaciones - EIT"></a>
+            </div>
+        </div>
+        <div class="capsula-escuela">
+            <div class="doscol">
+                <a href="/Escuelas/IngenieriaEI"><img src="/images/Escuela-Ingenieria.png?ver=1.1" class="img-capsula-escuela" alt="UDI - Escuela de Ingeniería" title="UDI - Escuela de Ingeniería - EI"></a>
+            </div>
+            <div class="doscol">
+                <a href="/Escuelas/AdministracionNegociosEAN"><img src="/images/Escuela-Administracion.png?ver=1.1" class="img-capsula-escuela" alt="UDI - Escuela de Administración - EAN" title="UDI - Escuela de Administración - EAN"></a>
+            </div>
+        </div>
+        <div class="capsula-aprende-haciendo">
+            <div class="doscol">
+                <h2>UDI, APRENDÉ HACIENDO</h2>
+                <p style="font-size:16px;font-weight:normal;text-align:justify;">
+                    La Universidad para el desarrollo y la innovación UDI, nace con el patrocinio de la Fundación para la Educación, Acción y Emprendimiento EDACE, busca satisfacer la necesidad de formar personas con la capacidad de integrarse a la economía del conocimiento y por ende a la sociedad globalizada, formando capital humano altamente capacitado, capaz de crear y administrar empresas en forma profesional y cuyo desempeño impulse al desarrollo de la región y el país.
+                </p>
+            </div>
+            <div class="doscol">
+                <a href="/Inscripciones"><img src="/images/img-vid3.png?ver=1.1" class="img-capsula-aprende" alt="UDI - Capsula Aprende" title="UDI - Capsula Aprende"></a>
+            </div>
+        </div>
+    </div>
+    <div class="trescol-Portada">
+        <h2>CONTÁCTANOS</h2>
+        <div id="form-contact">
+            <form method="post" action="{{ path('Enviar-Mensaje') }}" onsubmit="return validar();">
+                <input type="text" name="nombre" placeholder="* Nombre Completo:">
+                <input type="text" name="telefono" placeholder="* Teléfono:">
+                <input type="text" name="email" placeholder="* E-mail:">
+                <textarea name="mensaje" placeholder="Mensaje:"></textarea>
+                <input type="hidden" id="oferta" name="oferta" value="Contacto General">
+                <input type="submit" class="boton-envio" value="ENVIAR">
+            </form>
+        </div>
+        <a href="/Inscripciones" style="display:none ">
+            <div id="inscript">
+                <div id="cont-inscrip" style="background:#F40000;">
+                    <div id="mensaje-inscrip">
+                        INSCRIPCIONES ABIERTAS
+                    </div>
+                    <div id="datos-contacto">
+                        <p>Telf.: 3 422525</p>
+                        <p>Email: info@udi.edu.bo</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <h2 class="heventos" style="margin-top: 3rem;">Eventos y Actividades</h2>
+        <a href="/Noticias/Index" class="boton">Ver todos los eventos y actividades</a>
+
+        <a href="/Eventos/MusicaLatinaMarista">
+            <div class="evento">
+                <div class="fecha-evento">
+                    17 Ago <font style="font-size:18px;">Sabado</font>
+                </div>
+                <div class="detalle-evento">
+                    <div class="detalle-sup">
+                        Festival de Musica Latina - Colegio Marista
+                    </div>
+                    <div class="detalle-inf">
+                        Universidad Para el desarrollo y la innovación
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/Eventos/ConsursoPaella">
+            <div class="evento">
+                <div class="fecha-evento">
+                    11 Ago <font style="font-size:18px;">Domingo</font>
+                </div>
+                <div class="detalle-evento">
+                    <div class="detalle-sup">
+                        Concurso de Paellas en Santa Cruz
+                    </div>
+                    <div class="detalle-inf">
+                        Universidad Para el desarrollo y la innovación
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+
+        <div class="capsula-aprende-haciendo">
+            <a href="/doc/agendasemanal.pdf" target="_blank" style=" text-decoration:none; color:#7B7B7B">
+                <h3 class="heventos" style="margin-top: 3rem;">Agenda Semanal</h3>
+            </a>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="carreras">
+    <h2>CARRERAS NIVEL LICENCIATURA</h2>
+    <div id="sec-carreras">
+        <div class="carrera"><a href="/InformaticaYTelecomunicacionesEIT/IngenieriaDeSistemas"><div class="imagen-carrera"><img src="/images/sistemas.png" alt="UDI - Ingeniería de Sistemas" title="UDI - Ingeniería de Sistemas"></div><div class="titulo-carrera"><p>Ingeniería de Sistemas</p></div></a></div>
+        <div class="carrera"><a href="/IngenieriaEI/IngenieriaIndustrial"><div class="imagen-carrera"><img src="/images/industrial.png" alt="UDI - Ingeniería de Sistemas" title="UDI - Ingeniería de Sistemas"></div><div class="titulo-carrera"><p>Ingeniería Industrial</p></div></a></div>
+        <div class="carrera"><a href="/IngenieriaEI/IngenieriaMecanica"><div class="imagen-carrera"><img src="/images/mecanica.png" alt="UDI - Ingeniería Mecánica, Automotriz Autotrónica" title="UDI - Ingeniería Mecánica, Automotriz Autotrónica"></div><div class="titulo-carrera"><p>Mecánica Automotriz y Autotrónica </p></div></a></div>
+        <div class="carrera"><a href="/AdministracionYNegociosEAN/IngenieriaComercial"><div class="imagen-carrera"><img src="/images/comercial.png" alt="UDI - Ingeniería Comercial" title="UDI - Ingeniería Comercial"></div><div class="titulo-carrera"><p>Ingeniería Comercial</p></div></a></div>
+        <div class="carrera"><a href="/InformaticaYTelecomunicacionesEIT/IngenieriaDeConectividadYRedes"><div class="imagen-carrera"><img src="/images/redes.png" alt="UDI - Ingeniería en Conectividad y Redes" title="UDI - Ingeniería en Conectividad y Redes"></div><div class="titulo-carrera"><p>Ingeniería en Conectividad y Redes</p></div></a></div>
+        <div class="carrera"><a href="/InformaticaYTelecomunicacionesEIT/DisenoGrafico"><div class="imagen-carrera"><img src="/images/diseno-grafico.png" alt="UDI - Diseño Gráfico" title="UDI - Diseño Gráfico"></div><div class="titulo-carrera"><p>Diseño Gráfico</p></div></a></div>
+        <div class="carrera"><a href="/GastronomiaYTurismoEGT/Gastronomia"><div class="imagen-carrera"><img src="/images/gastronomia.png" alt="UDI - Gastronomía" title="UDI - Gastronomía"></div><div class="titulo-carrera"><p>Gastronomía</p></div></a></div>
+        <!--<div class="carrera"><a href="{{ path('Escuelas-Informatica-y-Telecomunicaciones-EIT-Diseno-Industrial') }}"><div class="imagen-carrera"><img src="~/images/industrial.png" alt="UDI - Diseño Industrial" title="UDI - Diseño Industrial"></div><div class="titulo-carrera"><p>Diseño Industrial</p></div></a></div>
+    </div>-->
+    </div>
+    <div id="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.2289662482917!2d-63.172080485728834!3d-17.73384748787181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7a673b1f13b%3A0xd5fa3d346c22f0!2sUniversidad+para+el+desarrollo+y+la+innovaci%C3%B3n!5e0!3m2!1ses-419!2sbo!4v1475781286180" height="300" frameborder="0" style="border:0;max-width:100%;width:100%;" allowfullscreen></iframe>
+    </div>
+
+
+
+    <div id="pie" style="background:#F40000;">
+        <div id="redes-sociales">
+            <div id="facebook"><img src="/images/facebook.png" alt="UDI Facebook" title="UDI Facebook"></div>
+            <!-- <div id="twitter"><img src="images/twitter.png" alt="UDI Twitter" title="UDI Twitter"></div>-->
+            <div id="youtube"><img src="/images/youtube.png" alt="UDI Youtube" title="UDI Youtube"></div>
+            <!--<div id="googlemas"><img src="images/googlemas.png" alt="UDI Google +" title="UDI Google +"></div>-->
+        </div>
+        <div id="menupie">
+            <ul>
+                <li><a href="/Home">Inicio</a></li>
+                <li><a href="/QuienesSomos/FundacionUdi">¿Quiénes somos?</a></li>
+                <li><a href="/PorqueLaUDI/ModeloDeFormacionPorCompetencia">¿Por qué la UDI?</a></li>
+                <li><a href="{{ path('Educacion-Continua-EC') }}">Posgrado</a></li>
+                <li><a href="/CampusUDI/Index">Campus UDI</a></li>
+                <li><a href="/Escuelas/Index">Escuelas</a></li>
+                <li><a href="/Inscripciones/RequisitosDeInscripcion">Inscripciones</a></li>
+            </ul>
+        </div>
+        <div id="logo-pie">
+            <img src="/images/logo_udi.png" alt="UDI Logo" title="UDI">
+            <!--<p id="texto-pie">Av. Cristo Redentor <br>Telf.: 3422525 info@udi.edu.bo</p>--><br/><br/>
+        </div>
+        <br/> 
+        <div style="text-align:center;" >
+            <p id="texto-pie">Copyright<span style='font-size:13px;'> &copy; </span>2017, Derechos Reservados Universidad para el  Desarrollo y la Innovación UDI, Campus Universitario: Av. Cristo Redentor entre  5to y 6to Anillo, teléfono de contacto (591) (3) 3422525</p>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
