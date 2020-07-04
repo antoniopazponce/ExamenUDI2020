@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CargoDA.cs" />
-    <Compile Include="ClienteDA.cs" />
     <Compile Include="ConexionSQL.cs" />
     <Compile Include="DepartamentoDA.cs" />
     <Compile Include="EmpleadoDA.cs" />
