@@ -18,7 +18,7 @@ namespace DataAccess
         /// METODO QUE AGREGAR UN CARGO
         /// </summary>
         /// <param name="cargo"></param>
-        public void AgregarCargo(CargoE cargo)
+        public void AgregarCargoPrueba(CargoE cargo)
         {
             using (SqlConnection conn = new SqlConnection(ConexionSQL.ObtenerCadenaSQL())) 
             {
